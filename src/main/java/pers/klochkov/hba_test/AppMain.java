@@ -5,7 +5,7 @@ import pers.klochkov.hba_test.card.CreditCard;
 import pers.klochkov.hba_test.card.DebitCard;
 import pers.klochkov.hba_test.decorator.BankCardAccumulationTopUp;
 import pers.klochkov.hba_test.decorator.BankCardBonus;
-import pers.klochkov.hba_test.decorator.BankCardCashbackFivePercent;
+import pers.klochkov.hba_test.decorator.BankCardCashbackPercent;
 
 import java.math.BigDecimal;
 
@@ -71,8 +71,8 @@ public class AppMain {
 
 
         //проверка с кэшбэком, при чем возврат кэшбэка навешиваем на ту же карту что и подключена к на 0.005% пополнения которая использовалась в предыдущем примере
-        System.out.println("\n\n\n6Проверка при платеже BankCardCashbackFivePercent");
-        bankCard = new BankCardCashbackFivePercent(bankCard, BigDecimal.valueOf(5), BigDecimal.valueOf(5000));
+        System.out.println("\n\n\n6Проверка при платеже BankCardCashbackPercent");
+        bankCard = new BankCardCashbackPercent(bankCard, BigDecimal.valueOf(5), BigDecimal.valueOf(5000));
         bankCard.pay(BigDecimal.valueOf(10000));
         System.out.println(String.format("6.1После платежа на 10_000 новой expectedBalance = 95505.00, actualBalance = %s, expectedAvailableFunds = 100505.00, actualAvailableFunds = %s", bankCard.getBalance(), bankCard.getAvailableFundsInfo()));
         bankCard.pay(BigDecimal.valueOf(1000));
