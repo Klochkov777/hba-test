@@ -1,7 +1,5 @@
 package pers.klochkov.hba_test.card;
 
-import pers.klochkov.hba_test.card.BankCard;
-
 import java.math.BigDecimal;
 
 public class DebitCard extends BankCard {
