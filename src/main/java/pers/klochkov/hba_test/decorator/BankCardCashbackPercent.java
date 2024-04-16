@@ -4,11 +4,11 @@ import pers.klochkov.hba_test.card.BankCardOperations;
 
 import java.math.BigDecimal;
 
-public class BankCardCashbackFivePercent extends BankCardDecorator {
+public class BankCardCashbackPercent extends BankCardDecorator {
     private BigDecimal percentCashback;
     private BigDecimal predicatePaySum;
 
-    public BankCardCashbackFivePercent(BankCardOperations bankCardOperations, BigDecimal percentCashback, BigDecimal predicatePaySum) {
+    public BankCardCashbackPercent(BankCardOperations bankCardOperations, BigDecimal percentCashback, BigDecimal predicatePaySum) {
         super(bankCardOperations);
         this.percentCashback = percentCashback;
         this.predicatePaySum = predicatePaySum;
